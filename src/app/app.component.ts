@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'app';
   url = 'http://blog.miniasp.com/';
   imgurl = '/assets/images/logo.png';
-  count = null;
+  count = 0;
   constructor() {
   }
   changeTitle(altKey: boolean) {
@@ -19,5 +19,9 @@ export class AppComponent {
   }
   getKey(evt: HTMLInputElement) {
     this.count = evt.value.length;
+  }
+  cleanValue(evt: HTMLInputElement) {
+      this.count = 0;
+      evt.value = '';
   }
 }
